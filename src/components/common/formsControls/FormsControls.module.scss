@@ -1,0 +1,112 @@
+@import '../../../assets/css/variables.scss';
+
+.sampleForm {
+  width: 350px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.field {
+  width: 100%;
+  margin-bottom: 12pt;
+  position: relative;
+  padding-top: 12pt;
+
+  p,
+  span {
+    text-align: left;
+    font-size: 1.1rem;
+    position: absolute;
+    top: 12pt;
+    left: 9pt;
+    right: 0pt;
+    display: flex;
+    align-items: center;
+    height: 28pt;
+    color: $colorPlaceholder;
+    pointer-events: none;
+    transition: 0.25s ease-out;
+  }
+
+  span {
+    will-change: opacity;
+    opacity: 0;
+  }
+
+  input:focus+p,
+  textarea:focus+p,
+  input:valid+p,
+  textarea:valid+p,
+  select:valid+span {
+    top: 0pt;
+    left: 2pt;
+    font-size: 0.8rem;
+    height: unset;
+    opacity: 1;
+  }
+
+  select:valid option[disabled] {
+    display: none;
+  }
+
+  input,
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    border-top: 0.5pt solid #fff;
+    border-bottom: 0.5pt solid #fff;
+    border-radius: 6pt;
+    height: 28pt;
+    font-size: 1.1rem;
+    padding: 0pt 6pt;
+    color: $colorText;
+  }
+
+  select:invalid {
+    color: $colorPlaceholder;
+  }
+
+  select option {
+    background-color: #000030;
+    color: $colorText;
+  }
+
+  textarea {
+    height: 80pt;
+  }
+}
+
+.submit {
+  width: 100%;
+  border-left: 0.5pt solid #fff;
+  border-right: 0.5pt solid #fff;
+  border-top: 0.5pt solid transparent;
+  border-bottom: 0.5pt solid transparent;
+  border-radius: 6pt;
+  font-size: 1.1rem;
+  padding: 0pt 6pt;
+  color: $colorText;
+  letter-spacing: 3pt;
+  cursor: pointer;
+  transition: border 0.5s ease-out;
+}
+
+.submit:hover,
+.submit:hover {
+  border-top: 0.5pt solid #fff;
+  border-bottom: 0.5pt solid #fff;
+}
+
+.submit:disabled,
+.submit:disabled {
+  border-color: $colorPlaceholder;
+  color: $colorPlaceholder;
+  cursor: not-allowed;
+  border-top: unset;
+  border-bottom: unset;
+  transition: unset;
+}

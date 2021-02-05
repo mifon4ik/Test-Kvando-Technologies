@@ -1,0 +1,54 @@
+.sectionButtons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.sectionPosts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__item {
+    border: 1px solid #000;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__photo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__video {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &__playButton {
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        top: calc(50% - 32px);
+        left: calc(50% - 32px);
+      }
+    }
+
+    &__link>a {
+      text-decoration: underline;
+    }
+
+    &__link>a:hover {
+      text-decoration: unset;
+    }
+  }
+}

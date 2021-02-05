@@ -1,0 +1,99 @@
+/*
+  Tags:
+    VARIABLES
+    MAIN STYLES
+    FORM
+*/
+
+@charset "utf-8";
+
+/* ----------------- VARIABLES ----------------- */
+
+@import './variables.scss';
+
+/* ----------------- MAIN STYLES ----------------- */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+body,
+html {
+  color: $colorText;
+  background-color: $colorBackground;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  overflow: hidden visible;
+  overflow-x: hidden;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a,
+input,
+textarea,
+button,
+select,
+option {
+  font: inherit;
+  background: none;
+  border: none;
+  resize: none;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: 0.25s ease-in;
+  -moz-transition: 0.25s ease-in;
+  transition: 0.25s ease-in;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a,
+a:hover,
+a:visited {
+  color: $colorText;
+}
+
+.max-width {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header,
+main,
+footer {
+  padding: 0px 15px;
+}
+
+
+/* ----------------- FORM ----------------- */
+
+form {
+  margin: 0;
+  padding: 0;
+}
